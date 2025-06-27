@@ -23,14 +23,12 @@ const handleSearch = async (cityName) => {
         autoClose: 1000,
       })
   } catch (err) {
-    if (err.response?.status === 404) {
-      //404
+    if (err.response?.status === 404) { //404
       toast.error('City not found!', {
         position: 'top-right',
         autoClose: 1000,
       })
-    } else if (err.response?.status >= 400) {
-      //400
+    } else if (err.response?.status >= 400) { //400
       toast.error('Bad request!', {
         position: 'top-right',
         autoClose: 1000,
@@ -69,7 +67,7 @@ const handleSearch = async (cityName) => {
       </div>
 
       <!-- weather data -->
-      <WeatherCard v-if="weatherData" v-bind:weather-data="weatherData" />
+      <WeatherCard v-if="weatherData" v-bind:weather-data="weatherData" /> 
     </div>
   </div>
 </template>
